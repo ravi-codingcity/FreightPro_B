@@ -24,7 +24,6 @@ const formSchema = new mongoose.Schema(
     thc: { type: String },
     muc: { type: String },
     toll: { type: String },
-    ihc: { type: String },
     customLabel: { type: String },
     customValue: { type: String },
     customUnit: { type: String },
