@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/auth");
 const formRoutes = require("./routes/formRoutes");
+const podDestinationRoutes = require("./routes/POD_destinationRoutes");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
@@ -37,6 +38,7 @@ app.use(
 // Routes
 app.use("/api/auth", authRoutes); // Ensure this route is correctly set up
 app.use("/api/forms", formRoutes);
+app.use("/api/destinations", podDestinationRoutes);
 
 // Error Handling Middleware
 app.use(errorHandler);
